@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SUS Builder V0.1</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f4f7f9;
+      color: #24313a;
+    }
+
+    header {
+      background: #15364a;
+      color: white;
+      padding: 22px 30px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    header p {
+      margin: 6px 0 0;
+      opacity: 0.75;
+    }
+
+    .app {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      min-height: calc(100vh - 90px);
+    }
+
+    .sidebar {
+      background: white;
+      border-right: 1px solid #dbe3e8;
+      padding: 24px;
+    }
+
+    .sidebar h2 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    .field {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #52636f;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #cbd6dc;
+      border-radius: 7px;
+      background: white;
+      font-size: 14px;
+    }
+
+    main {
+      padding: 28px;
+    }
+
+    .panel {
+      background: white;
+      border: 1px solid #dbe3e8;
+      border-radius: 12px;
+      padding: 22px;
+      margin-bottom: 22px;
+    }
+
+    .panel h2 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    #drawing {
+      width: 100%;
+      height: 290px;
+      background: #fafcfd;
+      border: 1px dashed #c8d5dc;
+      border-radius: 10px;
+    }
+
+    .node {
+      fill: white;
+      stroke: #47758b;
+      stroke-width: 2;
+    }
+
+    .pump-node {
+      fill: #eef7f3;
+      stroke: #39745b;
+      stroke-width: 2;
+    }
+
+    .filter-node {
+      fill: #fff8e7;
+      stroke: #a87918;
+      stroke-width: 2;
+    }
+
+    .connector-node {
+      fill: #f5effb;
+      stroke: #76559a;
+      stroke-width: 2;
+    }
+
+    .tube {
+      stroke: #4f6875;
+      stroke-width: 5;
+      stroke-linecap: round;
+    }
+
+    .svg-title {
+      font-size: 13px;
+      font-weight: 600;
+      text-anchor: middle;
+    }
+
+    .svg-sub {
+      font-size: 10px;
+      fill: #657984;
+      text-anchor: middle;
+    }
+
+    .status {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 20px;
+      background: #e8f5ee;
+      color: #28724f;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th,
+    td {
+      padding: 11px;
+      border-bottom: 1px solid #e2e8ec;
+      text-align: left;
+    }
+
+    th {
+      color: #60727d;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    .note {
+      color: #74858e;
+      font-size: 12px;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 800px) {
+      .app {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #dbe3e8;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Single-Use Systems Builder</h1>
+  <p>Vendor-neutral SUS design prototype · V0.1</p>
+</header>
+
+<div class="app">
+
+  <aside class="sidebar">
+
+    <h2>Assembly Components</h2>
+
+    <div class="field">
+      <label for="bag">Source Bag</label>
+      <select id="bag">
+        <option value="Sartorius 200 L Bag">Sartorius · 200 L Bag</option>
+        <option value="Generic 100 L Bag">Generic · 100 L Bag</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="tube">Transfer Tubing</label>
+      <select id="tube">
+        <option value="C-Flex 072">Saint-Gobain · C-Flex 072</option>
+        <option value="AdvantaFlex">AdvantaPure · AdvantaFlex</option>
+        <option value="Tygon PVC">Saint-Gobain · Tygon PVC</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="pumpTube">Pump Tubing</label>
+      <select id="pumpTube">
+        <option value="PharMed BPT">Saint-Gobain · PharMed BPT</option>
+        <option value="PharmaPure">Saint-Gobain · PharmaPure</option>
+        <option value="AdvantaSil APSPG">AdvantaPure · AdvantaSil APSPG</option>
+        <option value="SPT-60L">Saint-Gobain · Sani-Tech SPT-60L</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="pump">Pump</label>
+      <select id="pump">
+        <option value="Watson-Marlow">Watson-Marlow</option>
+        <option value="Masterflex">Masterflex</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="connector">Aseptic Connector</label>
+      <select id="connector">
+        <option value="AseptiQuik C">CPC · AseptiQuik C</option>
+        <option value="MicroCNX">CPC · MicroCNX</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="filter">Filter</label>
+      <select id="filter">
+        <option value="Meissner 0.2 µm">Meissner · 0.2 µm Filter</option>
+        <option value="No Filter">No Filter</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="reactor">Destination</label>
+      <select id="reactor">
+        <option value="2000 L Bioreactor">2000 L Bioreactor</option>
+        <option value="500 L Bioreactor">500 L Bioreactor</option>
+        <option value="Hold Bag">Hold Bag</option>
+      </select>
+    </div>
+
+  </aside>
+
+  <main>
+
+    <section class="panel">
+
+      <h2>Assembly Illustration</h2>
+
+      <span class="status">● Prototype configuration</span>
+
+      <svg id="drawing"
+           viewBox="0 0 1100 290"
+           role="img"
+           aria-label="Single-use system assembly">
+
+        <!-- Tubing path -->
+
+        <line class="tube" x1="145" y1="145" x2="260" y2="145"/>
+        <line class="tube" x1="380" y1="145" x2="445" y2="145"/>
+        <line class="tube" x1="565" y1="145" x2="625" y2="145"/>
+        <line class="tube" x1="745" y1="145" x2="805" y2="145"/>
+        <line class="tube" x1="925" y1="145" x2="970" y2="145"/>
+
+        <!-- Bag -->
+
+        <rect class="node"
+              x="25"
+              y="100"
+              width="120"
+              height="90"
+              rx="12"/>
+
+        <text id="bagLabel"
+              class="svg-title"
+              x="85"
+              y="135">
+          200 L Bag
+        </text>
+
+        <text class="svg-sub"
+              x="85"
+              y="155">
+          SOURCE
+        </text>
+
+        <!-- Transfer tubing -->
+
+        <text id="tubeLabel"
+              class="svg-sub"
+              x="200"
+              y="125">
+          C-Flex 072
+        </text>
+
+        <!-- Pump -->
+
+        <rect class="pump-node"
+              x="260"
+              y="100"
+              width="120"
+              height="90"
+              rx="45"/>
+
+        <text id="pumpLabel"
+              class="svg-title"
+              x="320"
+              y="135">
+          Watson-Marlow
+        </text>
+
+        <text id="pumpTubeLabel"
+              class="svg-sub"
+              x="320"
+              y="157">
+          PharMed BPT
+        </text>
+
+        <!-- Connector -->
+
+        <rect class="connector-node"
+              x="445"
+              y="112"
+              width="120"
+              height="66"
+              rx="10"/>
+
+        <text id="connectorLabel"
+              class="svg-title"
+              x="505"
+              y="142">
+          AseptiQuik C
+        </text>
+
+        <text class="svg-sub"
+              x="505"
+              y="160">
+          ASEPTIC
+        </text>
+
+        <!-- Filter -->
+
+        <rect class="filter-node"
+              x="625"
+              y="100"
+              width="120"
+              height="90"
+              rx="12"/>
+
+        <text id="filterLabel"
+              class="svg-title"
+              x="685"
+              y="135">
+          0.2 µm
+        </text>
+
+        <text class="svg-sub"
+              x="685"
+              y="157">
+          FILTER
+        </text>
+
+        <!-- Destination -->
+
+        <rect class="node"
+              x="805"
+              y="90"
+              width="120"
+              height="110"
+              rx="28"/>
+
+        <text id="reactorLabel"
+              class="svg-title"
+              x="865"
+              y="135">
+          2000 L
+        </text>
+
+        <text class="svg-sub"
+              x="865"
+              y="157">
+          BIOREACTOR
+        </text>
+
+      </svg>
+
+      <p class="note">
+        V0.1 schematic only — not an engineering drawing or validated assembly.
+      </p>
+
+    </section>
+
+    <section class="panel">
+
+      <h2>Bill of Materials</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Manufacturer</th>
+            <th>Product</th>
+            <th>Qty</th>
+          </tr>
+        </thead>
+
+        <tbody id="bom"></tbody>
+
+      </table>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script>
+
+  const bag = document.getElementById("bag");
+  const tube = document.getElementById("tube");
+  const pumpTube = document.getElementById("pumpTube");
+  const pump = document.getElementById("pump");
+  const connector = document.getElementById("connector");
+  const filter = document.getElementById("filter");
+  const reactor = document.getElementById("reactor");
+
+  function manufacturer(product) {
+
+    if (
+      product.includes("C-Flex") ||
+      product.includes("PharMed") ||
+      product.includes("PharmaPure") ||
+      product.includes("Tygon") ||
+      product.includes("SPT")
+    ) return "Saint-Gobain";
+
+    if (
+      product.includes("AdvantaFlex") ||
+      product.includes("AdvantaSil")
+    ) return "AdvantaPure";
+
+    if (
+      product.includes("AseptiQuik") ||
+      product.includes("MicroCNX")
+    ) return "CPC";
+
+    if (product.includes("Meissner"))
+      return "Meissner";
+
+    if (product.includes("Sartorius"))
+      return "Sartorius";
+
+    if (product.includes("Watson"))
+      return "Watson-Marlow";
+
+    if (product.includes("Masterflex"))
+      return "Masterflex";
+
+    return "TBD";
+  }
+
+  function updateBuilder() {
+
+    document.getElementById("bagLabel").textContent =
+      bag.value.replace("Sartorius ", "");
+
+    document.getElementById("tubeLabel").textContent =
+      tube.value;
+
+    document.getElementById("pumpLabel").textContent =
+      pump.value;
+
+    document.getElementById("pumpTubeLabel").textContent =
+      pumpTube.value;
+
+    document.getElementById("connectorLabel").textContent =
+      connector.value;
+
+    document.getElementById("filterLabel").textContent =
+      filter.value === "No Filter"
+        ? "No Filter"
+        : "0.2 µm";
+
+    document.getElementById("reactorLabel").textContent =
+      reactor.value;
+
+    const components = [
+      ["Source Bag", bag.value],
+      ["Transfer Tubing", tube.value],
+      ["Pump", pump.value],
+      ["Pump Tubing", pumpTube.value],
+      ["Connector", connector.value],
+      ["Filter", filter.value],
+      ["Destination", reactor.value]
+    ];
+
+    const bom = document.getElementById("bom");
+
+    bom.innerHTML = "";
+
+    components.forEach(component => {
+
+      if (component[1] === "No Filter")
+        return;
+
+      const row = document.createElement("tr");
+
+      row.innerHTML = `
+        <td>${component[0]}</td>
+        <td>${manufacturer(component[1])}</td>
+        <td>${component[1]}</td>
+        <td>1</td>
+      `;
+
+      bom.appendChild(row);
+
+    });
+
+  }
+
+  [
+    bag,
+    tube,
+    pumpTube,
+    pump,
+    connector,
+    filter,
+    reactor
+  ].forEach(element => {
+
+    element.addEventListener("change", updateBuilder);
+
+  });
+
+  updateBuilder();
+
+</script>
+
+</body>
+</html>
