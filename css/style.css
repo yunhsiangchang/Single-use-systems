@@ -175,3 +175,322 @@
         border-bottom: 1px solid #dbe3e8;
       }
     }
+
+    /* ========================================
+   SUS SYMBOLIC ILLUSTRATION
+======================================== */
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  margin: -8px 0 0;
+  color: #74858e;
+  font-size: 13px;
+}
+
+.drawing-wrapper {
+  overflow-x: auto;
+  border: 1px solid #dce6eb;
+  background: #fbfdfe;
+  border-radius: 10px;
+}
+
+#drawing {
+  width: 100%;
+  min-width: 850px;
+  height: auto;
+  min-height: 330px;
+  border: none;
+  background: transparent;
+}
+
+
+/* FLUID PATH */
+
+.fluid-line {
+  stroke: #1f5f93;
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.optional-line {
+  stroke: #607580;
+  stroke-width: 3;
+  stroke-dasharray: 8 7;
+}
+
+
+/* BAG */
+
+.bag-symbol {
+  fill: #ffffff;
+  stroke: #24313a;
+  stroke-width: 2.5;
+}
+
+.bag-port {
+  fill: #ffffff;
+  stroke: #24313a;
+  stroke-width: 2.5;
+}
+
+
+/* PUMP */
+
+.pump-symbol {
+  fill: #ffffff;
+  stroke: #24313a;
+  stroke-width: 3;
+}
+
+
+/* FILTER */
+
+.filter-symbol {
+  fill: #eaf4fb;
+  stroke: #24313a;
+  stroke-width: 2.5;
+}
+
+
+/* CONNECTOR */
+
+.connector-symbol {
+  fill: #bcd9ed;
+  stroke: #165b91;
+  stroke-width: 3;
+}
+
+
+/* SAMPLER */
+
+.sampler-symbol {
+  fill: #fff8db;
+  stroke: #24313a;
+  stroke-width: 2.5;
+}
+
+
+/* EQUIPMENT */
+
+.equipment-symbol {
+  fill: #ffffff;
+  stroke: #24313a;
+  stroke-width: 2.5;
+}
+
+
+/* WELD */
+
+.weld-symbol {
+  fill: #7553a6;
+}
+
+
+/* LUER CAP */
+
+.cap-symbol {
+  stroke: #b8561d;
+  stroke-width: 4;
+}
+
+
+/* LABELS */
+
+.symbol-label {
+  font-size: 14px;
+  font-weight: 600;
+  text-anchor: middle;
+  fill: #26353e;
+}
+
+.symbol-type {
+  font-size: 10px;
+  text-anchor: middle;
+  fill: #73848d;
+}
+
+.line-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-anchor: middle;
+  fill: #26353e;
+}
+
+.line-sub-label {
+  font-size: 10px;
+  text-anchor: middle;
+  fill: #73848d;
+}
+
+
+/* LEGEND */
+
+.symbol-reference {
+  margin-top: 18px;
+  padding-top: 15px;
+  border-top: 1px solid #e1e8ec;
+}
+
+.symbol-reference h3 {
+  margin: 0 0 15px;
+  font-size: 15px;
+}
+
+.symbol-grid {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(70px, 1fr));
+  gap: 12px;
+}
+
+.legend-item {
+  text-align: center;
+  font-size: 11px;
+  color: #536773;
+}
+
+.legend-item svg {
+  display: block;
+  width: 44px;
+  height: 44px;
+  margin: auto auto 5px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 1000px) {
+
+  .symbol-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .symbol-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .panel-header {
+    flex-direction: column;
+  }
+
+}
+
+/* ========================================
+   SIDEBAR SYMBOL LEGEND
+======================================== */
+
+.sidebar-legend {
+  margin-top: 24px;
+  padding: 16px;
+
+  background: #ffffff;
+  border: 1px solid #dbe3e8;
+  border-radius: 10px;
+}
+
+.sidebar-legend h2 {
+  margin: 0 0 14px;
+  font-size: 14px;
+}
+
+.sidebar-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: #536773;
+}
+
+.sidebar-legend-item svg {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+}
+
+/* ========================================
+   SYMBOL QUICK VIEW
+======================================== */
+
+.quick-view-panel {
+  padding: 0;
+  overflow: hidden;
+}
+
+.quick-view-header {
+  padding: 14px 18px;
+  border-bottom: 1px solid #dbe3e8;
+}
+
+.quick-view-header h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.quick-view-subtitle {
+  font-weight: 300;
+  color: #52636f;
+}
+
+.quick-symbol-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(65px, 1fr));
+  gap: 14px;
+  padding: 18px;
+  align-items: start;
+}
+
+.quick-symbol-item {
+  text-align: center;
+  color: #26353e;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.quick-symbol-item svg {
+  width: 52px;
+  height: 52px;
+  display: block;
+  margin: 0 auto 6px;
+}
+
+.quick-symbol-item span {
+  display: block;
+  line-height: 1.25;
+}
+
+.port-symbol {
+  fill: #ffffff;
+  stroke: #24313a;
+  stroke-width: 2.5;
+}
+
+.branch-symbol {
+  stroke: #24313a;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+@media (max-width: 1200px) {
+  .quick-symbol-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .quick-symbol-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
