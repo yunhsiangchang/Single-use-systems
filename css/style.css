@@ -249,15 +249,6 @@
   stroke-width: 3;
 }
 
-/* PUMP TUBING */
-
-.pump-tubing-line {
-  stroke: #7553a6;
-  stroke-width: 6;
-  stroke-linecap: round;
-}
-
-
 /* PUMP HEAD */
 
 .pump-head-symbol {
@@ -564,11 +555,6 @@
   stroke-linecap: square;
 }
 
-.cable-band-symbol line {
-  stroke: #354047;
-  stroke-width: 3.6;
-  stroke-linecap: square;
-}
 
 .barb-fitting-symbol {
   fill: #f7f9fa;
@@ -581,11 +567,6 @@
   stroke-width: 2.3;
 }
 
-.clamp-symbol line {
-  stroke: #4b5860;
-  stroke-width: 3.4;
-  stroke-linecap: round;
-}
 
 .luer-cap-symbol {
   fill: #ffffff;
@@ -596,4 +577,180 @@
 
 .quick-symbol-grid {
   grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
+}
+
+/* ========================================
+   V0.1.2 — REFINED SUS SYMBOLS
+======================================== */
+
+
+/* ----------------------------------------
+   ASEPTIC CONNECTOR
+   Double-circle symbol
+---------------------------------------- */
+
+.aseptic-connector-symbol .connector-outer {
+  fill: #eaf4fb;
+  stroke: #165b91;
+  stroke-width: 3;
+}
+
+.aseptic-connector-symbol .connector-inner {
+  fill: #165b91;
+  stroke: none;
+}
+
+
+/* ----------------------------------------
+   CPC / QUICK COUPLING
+   Two coupling halves
+---------------------------------------- */
+
+.cpc-coupling-symbol path {
+  fill: none;
+  stroke: #24313a;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* ----------------------------------------
+   CAPSULE FILTER
+---------------------------------------- */
+
+.capsule-filter-symbol {
+  fill: #eaf4fb;
+  stroke: #24313a;
+  stroke-width: 3;
+}
+
+
+/* ----------------------------------------
+   DISC FILTER
+   Heavy cross symbol
+---------------------------------------- */
+
+.disc-filter-symbol line {
+  stroke: #24313a;
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+
+/* ----------------------------------------
+   CABLE BAND / STRAP
+---------------------------------------- */
+
+.cable-band-symbol rect {
+  fill: #ffffff;
+  stroke: #354047;
+  stroke-width: 3;
+}
+
+.cable-band-symbol line {
+  stroke: #354047;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+
+/* ----------------------------------------
+   PINCH CLAMP
+---------------------------------------- */
+
+.pinch-clamp-symbol path,
+.pinch-clamp-symbol line {
+  fill: none;
+  stroke: #354047;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* ----------------------------------------
+   BARB / I-TYPE FITTING
+---------------------------------------- */
+
+.barb-fitting-symbol {
+  fill: #f7f9fa;
+  stroke: #354047;
+  stroke-width: 2.3;
+}
+
+
+/* ===============================
+   Pump Head
+=============================== */
+
+.pump-head-body{
+
+fill:white;
+
+stroke:#24313a;
+
+stroke-width:2.8;
+
+stroke-linejoin:round;
+
+}
+
+.pump-rotor{
+
+fill:white;
+
+stroke:#24313a;
+
+stroke-width:2.2;
+
+}
+
+.pump-roller{
+
+fill:#24313a;
+
+}
+
+/* ----------------------------------------
+   TRANSFER TUBING — PVC
+---------------------------------------- */
+
+.transfer-tubing-line {
+  stroke: #17689b;
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+
+/* ----------------------------------------
+   PUMP TUBING — PHARMED BPT
+---------------------------------------- */
+
+.pump-tubing-line {
+  stroke: #c8aa67;
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+
+/* ----------------------------------------
+   WELD
+---------------------------------------- */
+
+.weld-x {
+  stroke: #c45128;
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+
+/* ----------------------------------------
+   HEAT SEAL
+---------------------------------------- */
+
+.seal-symbol {
+  stroke: #7650a7;
+  stroke-width: 6;
+  stroke-linecap: square;
 }
