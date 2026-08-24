@@ -94,12 +94,15 @@
     <span>Bag / Container</span>
   </div>
 
-  <div class="sidebar-legend-item">
-    <svg viewBox="0 0 40 40">
-      <polygon points="10,6 32,20 10,34" class="pump-symbol"/>
-    </svg>
-    <span>Pump</span>
-  </div>
+<div class="sidebar-legend-item">
+  <svg viewBox="0 0 40 40">
+    <polygon
+      points="20,6 7,31 33,31"
+      class="pump-head-symbol"
+    />
+  </svg>
+  <span>Pump Head</span>
+</div>
 
   <div class="sidebar-legend-item">
     <svg viewBox="0 0 40 40">
@@ -186,8 +189,11 @@
       aria-label="Single-use system symbolic assembly">
 
       <!-- MAIN FLUID PATH -->
-      <line class="fluid-line" x1="145" y1="170" x2="275" y2="170"/> 
-      <line class="fluid-line" x1="365" y1="170" x2="507" y2="170"/>
+
+      <!-- PVC / transfer tubing before pump -->
+      <line class="fluid-line" x1="145" y1="170" x2="275" y2="170"/>
+      <!-- PVC / transfer tubing after pump -->
+      <line class="fluid-line" x1="455" y1="170" x2="507" y2="170"/>
       <line class="fluid-line" x1="533" y1="170" x2="660" y2="170"/>
       <line class="fluid-line" x1="730" y1="170" x2="839" y2="170"/>
       <line class="fluid-line" x1="861" y1="170" x2="1010" y2="170"/>
@@ -252,60 +258,79 @@
       </g>
 
 
-      <!-- PUMP -->
-      <g class="component-symbol" id="pumpSymbol">
+      <!-- PUMP / PUMP TUBING SECTION -->
+<g class="component-symbol" id="pumpSymbol">
 
-        <polygon
-          class="pump-symbol"
-          points="275,115 365,170 275,225"
-        />
+  <!-- Continuous pump tubing -->
+  <line
+    class="pump-tubing-line"
+    x1="275"
+    y1="170"
+    x2="455"
+    y2="170"
+  />
 
-        <text
-          id="pumpLabel"
-          class="symbol-label"
-          x="320"
-          y="265">
-          Watson-Marlow
-        </text>
+  <!-- Upstream transition / weld -->
+  <rect
+    class="weld-symbol"
+    x="272"
+    y="160"
+    width="6"
+    height="20"
+    rx="2"
+  />
 
-        <text
-          class="symbol-type"
-          x="320"
-          y="287">
-          PUMP
-        </text>
+  <!-- Downstream transition / weld -->
+  <rect
+    class="weld-symbol"
+    x="452"
+    y="160"
+    width="6"
+    height="20"
+    rx="2"
+  />
+
+  <!-- Equilateral-style pump head symbol below tubing -->
+  <polygon
+    class="pump-head-symbol"
+    points="365,185 325,250 405,250"
+  />
+
+  <!-- Pump tubing label -->
+  <text
+    id="pumpTubeLabel"
+    class="line-label"
+    x="365"
+    y="145">
+    PharMed BPT
+  </text>
+
+  <text
+    class="line-sub-label"
+    x="365"
+    y="160">
+    Pump Tubing
+  </text>
+
+  <!-- Pump label -->
+  <text
+    id="pumpLabel"
+    class="symbol-label"
+    x="365"
+    y="273">
+    Watson-Marlow
+  </text>
+
+  <text
+    class="symbol-type"
+    x="365"
+    y="291">
+    PUMP HEAD
+  </text>
+
 
       </g>
 
-
-      <!-- PUMP TUBING / WELD -->
-      <g>
-
-        <rect
-          class="weld-symbol"
-          x="422"
-          y="160"
-          width="8"
-          height="20"
-          rx="2"
-        />
-
-        <text
-          id="pumpTubeLabel"
-          class="line-label"
-          x="430"
-          y="118">
-          PharMed BPT
-        </text>
-
-        <text
-          class="line-sub-label"
-          x="430"
-          y="135">
-          Pump Tubing
-        </text>
-
-      </g>
 
 
       <!-- ASEPTIC CONNECTOR -->
@@ -442,7 +467,7 @@
       <!-- Pump -->
       <div class="quick-symbol-item">
         <svg viewBox="0 0 60 60">
-          <polygon points="15,10 47,30 15,50" class="pump-symbol"/>
+          <polygon points="30,8 10,45 50,45" class="pump-head-symbol"/>
         </svg>
         <span>Pump</span>
       </div>

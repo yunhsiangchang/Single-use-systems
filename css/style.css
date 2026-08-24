@@ -249,6 +249,23 @@
   stroke-width: 3;
 }
 
+/* PUMP TUBING */
+
+.pump-tubing-line {
+  stroke: #7553a6;
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+
+/* PUMP HEAD */
+
+.pump-head-symbol {
+  fill: #ffffff;
+  stroke: #24313a;
+  stroke-width: 3;
+  stroke-linejoin: round;
+}
 
 /* FILTER */
 
