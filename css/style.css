@@ -754,3 +754,129 @@ fill:#24313a;
   stroke-width: 6;
   stroke-linecap: square;
 }
+
+
+/* ========================================
+   SUS BUILDER V0.2 — SYMBOL STANDARD
+   Final symbol overrides
+======================================== */
+
+
+/* ---------- PERISTALTIC PUMP ---------- */
+
+.pump-head-body {
+  fill: #ffffff;
+  stroke: #24313a;
+  stroke-width: 2.8;
+  stroke-linejoin: round;
+}
+
+.pump-rotor {
+  fill: #ffffff;
+  stroke: #24313a;
+  stroke-width: 2.4;
+}
+
+.pump-roller {
+  fill: #24313a;
+  stroke: none;
+}
+
+
+/* ---------- CAPSULE FILTER ---------- */
+
+.capsule-filter-symbol {
+  fill: #eaf4fb;
+  stroke: #24313a;
+  stroke-width: 3;
+}
+
+
+/* ---------- ASEPTIC CONNECTOR ---------- */
+
+.aseptic-connector-symbol .connector-outer {
+  fill: #eaf4fb;
+  stroke: #17689b;
+  stroke-width: 3;
+}
+
+.aseptic-connector-symbol .connector-inner {
+  fill: #17689b;
+  stroke: none;
+}
+
+
+/* ---------- BARB / I FITTING ---------- */
+
+.barb-fitting-symbol {
+  fill: #ffffff;
+  stroke: #354047;
+  stroke-width: 2.3;
+}
+
+
+/* ---------- CABLE BAND ---------- */
+
+.cable-band-symbol rect {
+  fill: #ffffff;
+  stroke: #354047;
+  stroke-width: 2.5;
+}
+
+.cable-band-symbol line {
+  stroke: #354047;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+
+
+/* ---------- PINCH CLAMP ---------- */
+
+.pinch-clamp-symbol path,
+.pinch-clamp-symbol line {
+  fill: none;
+  stroke: #354047;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* ---------- PVC / TRANSFER TUBING ---------- */
+
+.transfer-tubing-line {
+  fill: none;
+  stroke: #17689b;
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+
+/* ---------- PHARMED BPT ---------- */
+
+.pump-tubing-line {
+  fill: none;
+  stroke: #c8aa67;
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+
+/* ---------- WELD ---------- */
+
+.weld-x {
+  fill: none;
+  stroke: #c45128;
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+
+/* ---------- HEAT SEAL ---------- */
+
+.seal-symbol {
+  fill: none;
+  stroke: #7650a7;
+  stroke-width: 6;
+  stroke-linecap: square;
+}
