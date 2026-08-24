@@ -511,3 +511,89 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/* ========================================
+   V0.1.2 — TUBING / FITTING / CLAMP MODEL
+======================================== */
+
+.transfer-tubing-line {
+  stroke: #17689b;
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+.pump-tubing-line {
+  stroke: #c8aa67;
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+.pump-tube-label {
+  font-size: 14px;
+  font-weight: 600;
+  text-anchor: middle;
+  fill: #ad8c43;
+}
+
+.pump-tube-sub-label {
+  font-size: 11px;
+  font-weight: 400;
+  text-anchor: middle;
+  fill: #ad8c43;
+}
+
+.pump-rotor-symbol {
+  fill: none;
+  stroke: #24313a;
+  stroke-width: 2.6;
+}
+
+.pump-roller-symbol {
+  fill: #24313a;
+}
+
+.weld-x {
+  stroke: #be5518;
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+.seal-symbol {
+  stroke: #7650a7;
+  stroke-width: 7;
+  stroke-linecap: square;
+}
+
+.cable-band-symbol line {
+  stroke: #354047;
+  stroke-width: 3.6;
+  stroke-linecap: square;
+}
+
+.barb-fitting-symbol {
+  fill: #f7f9fa;
+  stroke: #354047;
+  stroke-width: 2.3;
+}
+
+.fitting-line {
+  stroke: #354047;
+  stroke-width: 2.3;
+}
+
+.clamp-symbol line {
+  stroke: #4b5860;
+  stroke-width: 3.4;
+  stroke-linecap: round;
+}
+
+.luer-cap-symbol {
+  fill: #ffffff;
+  stroke: #b8561d;
+  stroke-width: 2.4;
+  stroke-linejoin: round;
+}
+
+.quick-symbol-grid {
+  grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
+}

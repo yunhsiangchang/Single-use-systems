@@ -14,7 +14,7 @@
 
 <header>
   <h1>Single-Use Systems Builder</h1>
-  <p>Vendor-neutral SUS design prototype · V0.1</p>
+  <p>Vendor-neutral SUS design prototype · V0.1.2</p>
 </header>
 
 <div class="app">
@@ -85,83 +85,128 @@
 
     <div class="sidebar-legend">
 
-  <h2>Legend (Common SUS Symbols) </h2>
+      <h2>Legend (Common SUS Symbols)</h2>
 
-  <div class="sidebar-legend-item">
-    <svg viewBox="0 0 40 40">
-      <rect x="10" y="8" width="20" height="25" class="bag-symbol"/>
-    </svg>
-    <span>Bag / Container</span>
-  </div>
+      <div class="sidebar-legend-item">
+        <svg viewBox="0 0 40 40">
+          <rect x="10" y="8" width="20" height="25" class="bag-symbol"/>
+        </svg>
+        <span>Bag / Container</span>
+      </div>
 
-<div class="sidebar-legend-item">
-  <svg viewBox="0 0 40 40">
-    <polygon
-      points="20,6 7,31 33,31"
-      class="pump-head-symbol"
-    />
-  </svg>
-  <span>Pump Head</span>
-</div>
+      <div class="sidebar-legend-item">
+        <svg viewBox="0 0 40 40">
+          <polygon points="20,5 6,32 34,32" class="pump-head-symbol"/>
+          <circle cx="20" cy="23" r="7" class="pump-rotor-symbol"/>
+        </svg>
+        <span>Pump Head</span>
+      </div>
 
-  <div class="sidebar-legend-item">
-    <svg viewBox="0 0 40 40">
-      <circle cx="20" cy="20" r="11" class="filter-symbol"/>
-    </svg>
-    <span>Filter</span>
-  </div>
+      <div class="sidebar-legend-item">
+        <svg viewBox="0 0 40 40">
+          <circle cx="20" cy="20" r="11" class="filter-symbol"/>
+        </svg>
+        <span>Filter</span>
+      </div>
 
-  <div class="sidebar-legend-item">
-    <svg viewBox="0 0 40 40">
-      <polygon points="20,5 35,20 20,35 5,20" class="sampler-symbol"/>
-    </svg>
-    <span>Sampler</span>
-  </div>
+      <div class="sidebar-legend-item">
+        <svg viewBox="0 0 40 40">
+          <polygon points="20,5 35,20 20,35 5,20" class="sampler-symbol"/>
+        </svg>
+        <span>Sampler</span>
+      </div>
 
-  <div class="sidebar-legend-item">
-    <svg viewBox="0 0 40 40">
-      <rect x="8" y="8" width="24" height="24" class="equipment-symbol"/>
-    </svg>
-    <span>Equipment / Reactor</span>
-  </div>
+      <div class="sidebar-legend-item">
+        <svg viewBox="0 0 40 40">
+          <rect x="8" y="8" width="24" height="24" class="equipment-symbol"/>
+        </svg>
+        <span>Equipment / Reactor</span>
+      </div>
 
-  <div class="sidebar-legend-item">
-    <svg viewBox="0 0 40 40">
-      <circle cx="20" cy="20" r="6" class="connector-symbol"/>
-    </svg>
-    <span>Aseptic Connector</span>
-  </div>
+      <div class="sidebar-legend-item">
+        <svg viewBox="0 0 40 40">
+          <circle cx="20" cy="20" r="6" class="connector-symbol"/>
+        </svg>
+        <span>Aseptic Connector</span>
+      </div>
 
-  <div class="sidebar-legend-item">
-    <svg viewBox="0 0 40 40">
-      <line x1="5" y1="20" x2="35" y2="20" class="fluid-line"/>
-    </svg>
-    <span>Tubing</span>
-  </div>
+      <div class="sidebar-legend-item">
+        <svg viewBox="0 0 40 40">
+          <line x1="5" y1="20" x2="35" y2="20" class="transfer-tubing-line"/>
+        </svg>
+        <span>PVC / Transfer Tubing</span>
+      </div>
 
-  <div class="sidebar-legend-item">
-    <svg viewBox="0 0 40 40">
-      <line x1="5" y1="20" x2="35" y2="20" class="optional-line"/>
-    </svg>
-    <span>Optional Path</span>
-  </div>
+      <div class="sidebar-legend-item">
+        <svg viewBox="0 0 40 40">
+          <line x1="5" y1="20" x2="35" y2="20" class="pump-tubing-line"/>
+        </svg>
+        <span>PharMed / Pump Tubing</span>
+      </div>
 
-  <div class="sidebar-legend-item">
-    <svg viewBox="0 0 40 40">
-      <rect x="17" y="8" width="6" height="24" class="weld-symbol"/>
-    </svg>
-    <span>Weld / Heat Seal</span>
-  </div>
+      <div class="sidebar-legend-item">
+        <svg viewBox="0 0 40 40">
+          <line x1="5" y1="20" x2="35" y2="20" class="optional-line"/>
+        </svg>
+        <span>Optional Path</span>
+      </div>
 
-  <div class="sidebar-legend-item">
-    <svg viewBox="0 0 40 40">
-      <line x1="12" y1="12" x2="28" y2="28" class="cap-symbol"/>
-      <line x1="28" y1="12" x2="12" y2="28" class="cap-symbol"/>
-    </svg>
-    <span>Luer Cap / Closure</span>
-  </div>
+      <div class="sidebar-legend-item">
+        <svg viewBox="0 0 40 40">
+          <line x1="11" y1="11" x2="29" y2="29" class="weld-x"/>
+          <line x1="29" y1="11" x2="11" y2="29" class="weld-x"/>
+        </svg>
+        <span>Weld</span>
+      </div>
 
-</div>
+      <div class="sidebar-legend-item">
+        <svg viewBox="0 0 40 40">
+          <line x1="20" y1="8" x2="20" y2="32" class="seal-symbol"/>
+        </svg>
+        <span>Heat Seal</span>
+      </div>
+
+      <div class="sidebar-legend-item">
+        <svg viewBox="0 0 40 40">
+          <g class="cable-band-symbol">
+            <line x1="15" y1="8" x2="15" y2="32"/>
+            <line x1="25" y1="8" x2="25" y2="32"/>
+            <line x1="11" y1="16" x2="29" y2="16"/>
+            <line x1="11" y1="24" x2="29" y2="24"/>
+          </g>
+        </svg>
+        <span>Cable Band / Strap</span>
+      </div>
+
+      <div class="sidebar-legend-item">
+        <svg viewBox="0 0 40 40">
+          <rect x="10" y="15" width="20" height="10" rx="2" class="barb-fitting-symbol"/>
+          <line x1="5" y1="20" x2="10" y2="20" class="fitting-line"/>
+          <line x1="30" y1="20" x2="35" y2="20" class="fitting-line"/>
+        </svg>
+        <span>Barb / I Fitting</span>
+      </div>
+
+      <div class="sidebar-legend-item">
+        <svg viewBox="0 0 40 40">
+          <g class="clamp-symbol">
+            <line x1="11" y1="11" x2="18" y2="20"/>
+            <line x1="11" y1="29" x2="18" y2="20"/>
+            <line x1="29" y1="11" x2="22" y2="20"/>
+            <line x1="29" y1="29" x2="22" y2="20"/>
+          </g>
+        </svg>
+        <span>Clamp</span>
+      </div>
+
+      <div class="sidebar-legend-item">
+        <svg viewBox="0 0 40 40">
+          <path d="M12 14 H25 V20 H30 V26 H12 Z" class="luer-cap-symbol"/>
+        </svg>
+        <span>Luer Cap / Closure</span>
+      </div>
+
+    </div>
 
   </aside>
 
@@ -190,148 +235,89 @@
 
       <!-- MAIN FLUID PATH -->
 
-      <!-- PVC / transfer tubing before pump -->
-      <line class="fluid-line" x1="145" y1="170" x2="275" y2="170"/>
-      <!-- PVC / transfer tubing after pump -->
-      <line class="fluid-line" x1="455" y1="170" x2="507" y2="170"/>
-      <line class="fluid-line" x1="533" y1="170" x2="660" y2="170"/>
-      <line class="fluid-line" x1="730" y1="170" x2="839" y2="170"/>
-      <line class="fluid-line" x1="861" y1="170" x2="1010" y2="170"/>
-      
-      <!-- BAG -->
-      <g class="component-symbol" id="bagSymbol">
+      <!-- UPSTREAM PVC / TRANSFER TUBING -->
+      <line class="transfer-tubing-line" x1="145" y1="170" x2="265" y2="170"/>
 
-        <rect
-          class="bag-symbol"
-          x="45"
-          y="105"
-          width="100"
-          height="125"
-          rx="6"
-        />
-
-        <rect
-          class="bag-port"
-          x="83"
-          y="92"
-          width="24"
-          height="13"
-          rx="3"
-        />
-
-        <text
-          id="bagLabel"
-          class="symbol-label"
-          x="95"
-          y="265">
-          200 L Bag
-        </text>
-
-        <text
-          class="symbol-type"
-          x="95"
-          y="287">
-          BAG / CONTAINER
-        </text>
-
+      <!-- Generic clamp on upstream PVC segment -->
+      <g class="clamp-symbol" aria-label="Clamp on upstream transfer tubing">
+        <line x1="205" y1="156" x2="216" y2="170"/>
+        <line x1="205" y1="184" x2="216" y2="170"/>
+        <line x1="227" y1="156" x2="216" y2="170"/>
+        <line x1="227" y1="184" x2="216" y2="170"/>
       </g>
 
+      <!-- BAG -->
+      <g class="component-symbol" id="bagSymbol">
+        <rect class="bag-symbol" x="45" y="105" width="100" height="125" rx="6"/>
+        <rect class="bag-port" x="83" y="92" width="24" height="13" rx="3"/>
+        <text id="bagLabel" class="symbol-label" x="95" y="265">200 L Bag</text>
+        <text class="symbol-type" x="95" y="287">BAG / CONTAINER</text>
+      </g>
 
       <!-- TRANSFER TUBING LABEL -->
       <g>
-
-        <text
-          id="tubeLabel"
-          class="line-label"
-          x="210"
-          y="142">
-          C-Flex 072
-        </text>
-
-        <text
-          class="line-sub-label"
-          x="210"
-          y="158">
-          Transfer Tubing
-        </text>
-
+        <text id="tubeLabel" class="line-label" x="205" y="132">C-Flex 072</text>
+        <text class="line-sub-label" x="205" y="148">PVC / Transfer Tubing</text>
       </g>
 
-
-      <!-- PUMP / PUMP TUBING SECTION -->
-<g class="component-symbol" id="pumpSymbol">
-
-  <!-- Continuous pump tubing -->
-  <line
-    class="pump-tubing-line"
-    x1="275"
-    y1="170"
-    x2="455"
-    y2="170"
-  />
-
-  <!-- Upstream transition / weld -->
-  <rect
-    class="weld-symbol"
-    x="272"
-    y="160"
-    width="6"
-    height="20"
-    rx="2"
-  />
-
-  <!-- Downstream transition / weld -->
-  <rect
-    class="weld-symbol"
-    x="452"
-    y="160"
-    width="6"
-    height="20"
-    rx="2"
-  />
-
-  <!-- Equilateral-style pump head symbol below tubing -->
-  <polygon
-    class="pump-head-symbol"
-    points="365,185 325,250 405,250"
-  />
-
-  <!-- Pump tubing label -->
-  <text
-    id="pumpTubeLabel"
-    class="line-label"
-    x="365"
-    y="145">
-    PharMed BPT
-  </text>
-
-  <text
-    class="line-sub-label"
-    x="365"
-    y="160">
-    Pump Tubing
-  </text>
-
-  <!-- Pump label -->
-  <text
-    id="pumpLabel"
-    class="symbol-label"
-    x="365"
-    y="273">
-    Watson-Marlow
-  </text>
-
-  <text
-    class="symbol-type"
-    x="365"
-    y="291">
-    PUMP HEAD
-  </text>
-
-
+      <!-- UPSTREAM BARB / I FITTING + CABLE BANDS -->
+      <g aria-label="Upstream barb fitting with cable bands">
+        <line class="transfer-tubing-line" x1="265" y1="170" x2="282" y2="170"/>
+        <g class="cable-band-symbol">
+          <line x1="282" y1="156" x2="282" y2="184"/>
+          <line x1="288" y1="156" x2="288" y2="184"/>
+        </g>
+        <rect class="barb-fitting-symbol" x="288" y="162" width="28" height="16" rx="3"/>
+        <g class="cable-band-symbol">
+          <line x1="316" y1="156" x2="316" y2="184"/>
+          <line x1="322" y1="156" x2="322" y2="184"/>
+        </g>
       </g>
 
+      <!-- PHARMED BPT PUMP TUBING -->
+      <line class="pump-tubing-line" x1="322" y1="170" x2="458" y2="170"/>
 
+      <!-- Pump tubing label ABOVE pump head -->
+      <text id="pumpTubeLabel" class="pump-tube-label" x="390" y="105">PharMed BPT</text>
+      <text class="pump-tube-sub-label" x="390" y="124">Pump Tubing</text>
+
+      <!-- PUMP HEAD: triangle + rotor -->
+      <g class="component-symbol" id="pumpSymbol">
+        <polygon class="pump-head-symbol" points="390,182 348,250 432,250"/>
+        <circle class="pump-rotor-symbol" cx="390" cy="221" r="17"/>
+        <circle class="pump-roller-symbol" cx="390" cy="210" r="3.5"/>
+        <circle class="pump-roller-symbol" cx="381" cy="228" r="3.5"/>
+        <circle class="pump-roller-symbol" cx="399" cy="228" r="3.5"/>
+        <text id="pumpLabel" class="symbol-label" x="390" y="275">Watson-Marlow</text>
+        <text class="symbol-type" x="390" y="294">PUMP HEAD</text>
+      </g>
+
+      <!-- DOWNSTREAM BARB / I FITTING + CABLE BANDS -->
+      <g aria-label="Downstream barb fitting with cable bands">
+        <g class="cable-band-symbol">
+          <line x1="458" y1="156" x2="458" y2="184"/>
+          <line x1="464" y1="156" x2="464" y2="184"/>
+        </g>
+        <rect class="barb-fitting-symbol" x="464" y="162" width="28" height="16" rx="3"/>
+        <g class="cable-band-symbol">
+          <line x1="492" y1="156" x2="492" y2="184"/>
+          <line x1="498" y1="156" x2="498" y2="184"/>
+        </g>
+        <line class="transfer-tubing-line" x1="498" y1="170" x2="507" y2="170"/>
+      </g>
+
+      <!-- DOWNSTREAM PVC / TRANSFER TUBING -->
+      <line class="transfer-tubing-line" x1="507" y1="170" x2="660" y2="170"/>
+      <line class="transfer-tubing-line" x1="730" y1="170" x2="839" y2="170"/>
+      <line class="transfer-tubing-line" x1="861" y1="170" x2="1010" y2="170"/>
+
+      <!-- Generic clamp on downstream PVC segment -->
+      <g class="clamp-symbol" aria-label="Clamp on downstream transfer tubing">
+        <line x1="564" y1="156" x2="575" y2="170"/>
+        <line x1="564" y1="184" x2="575" y2="170"/>
+        <line x1="586" y1="156" x2="575" y2="170"/>
+        <line x1="586" y1="184" x2="575" y2="170"/>
+      </g>
 
       <!-- ASEPTIC CONNECTOR -->
       <g class="component-symbol" id="connectorSymbol">
@@ -455,104 +441,89 @@
 
     <div class="quick-symbol-grid">
 
-      <!-- Bag -->
       <div class="quick-symbol-item">
-        <svg viewBox="0 0 60 60">
-          <rect x="16" y="14" width="28" height="34" class="bag-symbol"/>
-          <rect x="25" y="9" width="10" height="5" class="bag-port"/>
-        </svg>
+        <svg viewBox="0 0 60 60"><rect x="16" y="14" width="28" height="34" class="bag-symbol"/><rect x="25" y="9" width="10" height="5" class="bag-port"/></svg>
         <span>Bag</span>
       </div>
 
-      <!-- Pump -->
       <div class="quick-symbol-item">
-        <svg viewBox="0 0 60 60">
-          <polygon points="30,8 10,45 50,45" class="pump-head-symbol"/>
-        </svg>
-        <span>Pump</span>
+        <svg viewBox="0 0 60 60"><polygon points="30,8 10,50 50,50" class="pump-head-symbol"/><circle cx="30" cy="34" r="10" class="pump-rotor-symbol"/></svg>
+        <span>Pump Head</span>
       </div>
 
-      <!-- Filter -->
       <div class="quick-symbol-item">
-        <svg viewBox="0 0 60 60">
-          <circle cx="30" cy="30" r="17" class="filter-symbol"/>
-        </svg>
+        <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="17" class="filter-symbol"/></svg>
         <span>Filter</span>
       </div>
 
-      <!-- Sampler -->
       <div class="quick-symbol-item">
-        <svg viewBox="0 0 60 60">
-          <polygon points="30,9 51,30 30,51 9,30" class="sampler-symbol"/>
-        </svg>
+        <svg viewBox="0 0 60 60"><polygon points="30,9 51,30 30,51 9,30" class="sampler-symbol"/></svg>
         <span>Sampler</span>
       </div>
 
-      <!-- Equipment -->
       <div class="quick-symbol-item">
-        <svg viewBox="0 0 60 60">
-          <rect x="13" y="13" width="34" height="34" class="equipment-symbol"/>
-        </svg>
+        <svg viewBox="0 0 60 60"><rect x="13" y="13" width="34" height="34" class="equipment-symbol"/></svg>
         <span>Equipment / Reactor</span>
       </div>
 
-      <!-- Port -->
       <div class="quick-symbol-item">
-        <svg viewBox="0 0 60 60">
-          <polygon points="15,18 45,18 30,45" class="port-symbol"/>
-        </svg>
+        <svg viewBox="0 0 60 60"><polygon points="15,18 45,18 30,45" class="port-symbol"/></svg>
         <span>Port</span>
       </div>
 
-      <!-- Y / Branch -->
       <div class="quick-symbol-item">
-        <svg viewBox="0 0 60 60">
-          <line x1="30" y1="47" x2="30" y2="29" class="branch-symbol"/>
-          <line x1="30" y1="29" x2="17" y2="16" class="branch-symbol"/>
-          <line x1="30" y1="29" x2="43" y2="16" class="branch-symbol"/>
-        </svg>
+        <svg viewBox="0 0 60 60"><line x1="30" y1="47" x2="30" y2="29" class="branch-symbol"/><line x1="30" y1="29" x2="17" y2="16" class="branch-symbol"/><line x1="30" y1="29" x2="43" y2="16" class="branch-symbol"/></svg>
         <span>Y / Branch</span>
       </div>
 
-      <!-- Tubing -->
       <div class="quick-symbol-item">
-        <svg viewBox="0 0 60 60">
-          <line x1="10" y1="30" x2="50" y2="30" class="fluid-line"/>
-        </svg>
-        <span>Tubing</span>
+        <svg viewBox="0 0 60 60"><line x1="10" y1="30" x2="50" y2="30" class="transfer-tubing-line"/></svg>
+        <span>PVC / Transfer</span>
       </div>
 
-      <!-- Optional -->
       <div class="quick-symbol-item">
-        <svg viewBox="0 0 60 60">
-          <line x1="10" y1="30" x2="50" y2="30" class="optional-line"/>
-        </svg>
-        <span>Optional</span>
+        <svg viewBox="0 0 60 60"><line x1="10" y1="30" x2="50" y2="30" class="pump-tubing-line"/></svg>
+        <span>PharMed BPT</span>
       </div>
 
-      <!-- Connector -->
       <div class="quick-symbol-item">
-        <svg viewBox="0 0 60 60">
-          <circle cx="30" cy="30" r="7" class="connector-symbol"/>
-        </svg>
+        <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="7" class="connector-symbol"/></svg>
         <span>Connector</span>
       </div>
 
-      <!-- Weld -->
       <div class="quick-symbol-item">
-        <svg viewBox="0 0 60 60">
-          <rect x="27" y="15" width="6" height="30" class="weld-symbol"/>
-        </svg>
-        <span>Weld / Seal</span>
+        <svg viewBox="0 0 60 60"><rect x="17" y="24" width="26" height="12" rx="2" class="barb-fitting-symbol"/></svg>
+        <span>Barb / I Fitting</span>
       </div>
 
-      <!-- Luer Cap -->
       <div class="quick-symbol-item">
-        <svg viewBox="0 0 60 60">
-          <line x1="20" y1="20" x2="40" y2="40" class="cap-symbol"/>
-          <line x1="40" y1="20" x2="20" y2="40" class="cap-symbol"/>
-        </svg>
+        <svg viewBox="0 0 60 60"><g class="cable-band-symbol"><line x1="25" y1="14" x2="25" y2="46"/><line x1="35" y1="14" x2="35" y2="46"/><line x1="20" y1="24" x2="40" y2="24"/><line x1="20" y1="36" x2="40" y2="36"/></g></svg>
+        <span>Cable Band</span>
+      </div>
+
+      <div class="quick-symbol-item">
+        <svg viewBox="0 0 60 60"><g class="clamp-symbol"><line x1="18" y1="16" x2="28" y2="30"/><line x1="18" y1="44" x2="28" y2="30"/><line x1="42" y1="16" x2="32" y2="30"/><line x1="42" y1="44" x2="32" y2="30"/></g></svg>
+        <span>Clamp</span>
+      </div>
+
+      <div class="quick-symbol-item">
+        <svg viewBox="0 0 60 60"><line x1="20" y1="20" x2="40" y2="40" class="weld-x"/><line x1="40" y1="20" x2="20" y2="40" class="weld-x"/></svg>
+        <span>Weld</span>
+      </div>
+
+      <div class="quick-symbol-item">
+        <svg viewBox="0 0 60 60"><line x1="30" y1="16" x2="30" y2="44" class="seal-symbol"/></svg>
+        <span>Heat Seal</span>
+      </div>
+
+      <div class="quick-symbol-item">
+        <svg viewBox="0 0 60 60"><path d="M17 20 H37 V27 H43 V35 H17 Z" class="luer-cap-symbol"/></svg>
         <span>Luer Cap</span>
+      </div>
+
+      <div class="quick-symbol-item">
+        <svg viewBox="0 0 60 60"><line x1="10" y1="30" x2="50" y2="30" class="optional-line"/></svg>
+        <span>Optional</span>
       </div>
 
     </div>
